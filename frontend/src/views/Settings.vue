@@ -24,7 +24,7 @@
         <div class="toolbar">
           <el-date-picker v-model="holidayYear" type="year" value-format="yyyy" @change="loadHolidays" />
           <el-button type="primary" @click="loadHolidays">查询</el-button>
-          <span class="spacer" />
+          <el-spacer="spacer" />
           <el-button v-if="role === 'ADMIN'" type="success" @click="openHoliday">新增/修正</el-button>
           <el-button v-if="role === 'ADMIN'" @click="seedYear">播种该年</el-button>
         </div>
