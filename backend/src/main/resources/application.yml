@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: overtime-comp-leave
+  datasource:
+    url: jdbc:mysql://localhost:3306/overtime_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: Asia/Shanghai
+        format_sql: false
+    show-sql: false
+  jackson:
+    default-property-inclusion: non_null
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+# 应用自定义配置
+app:
+  # 单设备登录会话有效期（小时），超过需重新登录
+  session-timeout-hours: 24
+  # 文件存储根目录（绝对路径；留空则使用程序运行目录下 ./data）
+  data-dir: ${APP_DATA_DIR:./data}
+  backup-dir: ${APP_BACKUP_DIR:./backups}
+  upload-dir: ${APP_UPLOAD_DIR:./uploads}
+
+logging:
+  level:
+    com.lynn.overtime: INFO
+  file:
+    name: ${APP_DATA_DIR:./data}/app.log
