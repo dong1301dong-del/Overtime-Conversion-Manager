@@ -22,6 +22,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+# npm 锁文件（内网工具，安装时可重新生成，体积大不进版本库）
+package-lock.json
+
 
 # ===================== IDE =====================
 .idea/

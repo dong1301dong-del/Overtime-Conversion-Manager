@@ -1,6 +1,6 @@
 import json, urllib.request, subprocess
 
-MYSQL = "D:\tools\mysql\bin\mysql.exe"
+MYSQL = "D:\\tools\\mysql\\bin\\mysql.exe"
 
 def db_query(sql):
     out = subprocess.run([MYSQL, "-uroot", "-proot", "overtime_db", "-Nse", sql],
