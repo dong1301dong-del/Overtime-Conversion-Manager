@@ -1,6 +1,6 @@
 @echo off
 REM 构建前端并拷贝到后端静态目录（Windows 双击运行）
-cd /d %~dp0\..
+cd /d %~dp0..
 cd frontend
 call npm install
 call npm run build

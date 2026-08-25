@@ -5,7 +5,7 @@
   - 未登录/伪造 token -> code 401
   - 角色不符 -> code 1, message "无权限执行此操作"
   - 通过校验 -> code 0
-写操作允许的校验用"已存在/不存在的ID"触发业务校验而非鉴权校验，
+写操作允许的校验用“已存在/不存在的ID”触发业务校验而非鉴权校验，
 从而证明角色闸口已打开且不产生脏数据。
 """
 import json
@@ -172,7 +172,7 @@ def run():
         elif expect == "granted":
             ok = (code == 0)
         elif expect == "not_denied":
-            ok = (msg != DENY_MSG)  # 闸口打开（可能是业务校验失败，但不是"无权限"）
+            ok = (msg != DENY_MSG)  # 闸口打开（可能是业务校验失败，但不是“无权限”）
 
         results.append((name, ok, code, msg))
         print(f"[{'PASS' if ok else 'FAIL'}] {name} -> code={code} msg={msg}")
