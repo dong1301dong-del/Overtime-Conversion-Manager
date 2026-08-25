@@ -1,0 +1,23 @@
+{
+  "name": "overtime-comp-leave-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "加班转调休记录工具 - 前端（Vue3 + Element Plus）",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "axios": "^1.7.2",
+    "element-plus": "^2.7.6",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vite": "^5.3.3"
+  }
+}
