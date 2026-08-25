@@ -1,0 +1,62 @@
+# ===================== Java / Maven =====================
+target/
+*.class
+*.jar
+*.war
+*.log
+.mvn/
+mvnw
+mvnw.cmd
+!**/src/main/**/mvnw
+!**/src/main/**/mvnw.cmd
+
+# Maven wrapper downloaded distribution
+.mvn/wrapper/maven-wrapper.jar
+
+# ===================== Node / Vue =====================
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===================== IDE =====================
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.project
+.classpath
+.settings/
+
+# ===================== OS =====================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===================== App runtime =====================
+# 本机运行数据（数据库文件、备份、上传文件、日志），不进版本库
+backend/data/
+backend/backups/
+backend/uploads/
+backend/*.log
+frontend/dist/
+
+# 前端构建产物：项目用 npm run build 后产出，由打包脚本拷到 backend/src/main/resources/static。
+# 该目录是构建产物，每次构建哈希不同，不进版本库；构建时由 build.bat 重新拷贝。
+backend/src/main/resources/static/
+
+# 本地配置文件（含秘钥/端口），由部署脚本生成
+backend/src/main/resources/application-local.yml
+.env
+*.secret
+
+# ===================== WorkBuddy / 本机 =====================
+# 项目记忆、运行时数据、本地 MySQL 配置（含本机路径），不进版本库
+.workbuddy/
+scripts/mysql/
